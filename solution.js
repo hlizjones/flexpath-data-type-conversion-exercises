@@ -1,13 +1,24 @@
 import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  // To run the code you write for each exercise, change the text below to match the name
-  // of the exercise.
-  // For Example:
-  // If I want to run exercise_05 below, I would change the text from "exercise_01" to
-  // "exercise_05", save this file, and then when I run this file with `node exercise.js`
-  // the code for exercise_05 will run
+  /*
+
+    To run the code you write for each exercise, change the `exercise_01()` code below to match the EXACT name
+     of the exercise, as it is written in the line `function exercise_xx`.
+    
+     For Example:
+
+     If I want to run exercise_05 below, I would change the code below from "exercise_01()" to
+     "exercise_05()", save this file. 
+		 
+		 Then, when I run this file by running `node exercise.js`
+     in the VS Code terminal while inside this folder, your code for exercise_05 will run.
+
+  */
+
+  // Modify the line of code BELOW to run a different exercise
   exercise_01();
+  // Modify the line of code ABOVE to run a different exercise
 }
 
 export function exercise_01() {
@@ -17,7 +28,7 @@ export function exercise_01() {
     
     Data Types: 
 		
-		1. Create a 4 variables, each assigned to one of the following data types:
+		1. Create 4 variables, each assigned to one of the following data types:
 				- String
 				- Number
 				- Boolean
