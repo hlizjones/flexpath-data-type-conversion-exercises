@@ -17,7 +17,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_14();
+  exercise_18();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -294,8 +294,6 @@ export function exercise_12() {
 
     3. Use this formatter to format the variable from step 1.
        Then log the result to the console
-    
-    Format a number as currency in USD using Intl.NumberFormat. 
 
   */
 
@@ -325,8 +323,6 @@ export function exercise_13() {
 
     3. Use this formatter to format the variable from step 1.
        Then log the result to the console
-    
-    Format a number as currency in Japanese Yen using Intl.NumberFormat. 
 
   */
 
@@ -344,7 +340,7 @@ export function exercise_13() {
 export function exercise_14() {
   /* 
    
-    Exercise 15
+    Exercise 14
     
     Date String Conversion: 
 
@@ -352,8 +348,6 @@ export function exercise_14() {
     2. Then, call toDateString on the variable and print the result to the console
     3. Then, call toTimeString on the variable and print the result to the console
 		
-		Convert a Date object to a human-readable string using toDateString(). 
-		Then, convert it to a time string using toTimeString()
   */
 
   // CODE IN THE OPEN LINES BELOW
@@ -368,86 +362,125 @@ export function exercise_14() {
 export function exercise_15() {
   /* 
    
-    Exercise 16
+    Exercise 15
     
-    Locale Date Formatting:
+    Locale Date Formatting
+
+    1. Create a new Date object and assign it to a variable
+    2. Call the toLocaleDateString method on it and convert it to an en-US format date.
+       Log it to the console.
+    3. Call the toLocaleDateString method on it again and convert it to an en-GB format date.
+       Log it to the console
 		
-		Use toLocaleDateString() to format a current date for the US locale.
-		Then, format the current date for the UK locale. 
-		Log both results.
-		
-		Convert a Date object to a human-readable string using toDateString(). 
-		Then, convert it to a time string using toTimeString()
   */
+
+  // CODE IN THE OPEN LINES BELOW
+
   let currentDate = new Date();
   console.log(currentDate.toLocaleDateString("en-US"));
   console.log(currentDate.toLocaleDateString("en-GB"));
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_16() {
   /* 
    
-    Exercise 17
-    
-    Date and Time Formatting with options: 
-		
-		Format both the date and time using toLocaleString() with options.
-  */
-  let currentDate = new Date();
-  let options = { dateStyle: "short", timeStyle: "short" };
-  console.log(currentDate.toLocaleString("en-US", options)); // "10/25/23, 3:23 PM"
-}
-
-export function exercise_17() {
-  /* 
-   
-    Exercise 18
+    Exercise 16
     
     Error Handling: 
 		
-		Write a script that tries to parse invalid JSON and uses a try-catch block to handle the error.
+		1. Write code that tries to parse invalid JSON and uses a try-catch block to handle the error.
+
   */
+
+  // CODE IN THE OPEN LINES BELOW
   try {
     let invalidJson = JSON.parse("This is not JSON");
   } catch (error) {
     console.log("Error parsing JSON:", error.message);
   }
+
+  // CODE IN THE OPEN LINES ABOVE
+}
+
+export function exercise_17() {
+  /* 
+   
+    Exercise 17
+
+    1. Convert the Boolean value 'true' to a string.
+       Log it to he console
+    
+  */
+
+  // CODE IN THE OPEN LINES BELOW
+
+  let boolValue = true;
+  let boolAsString = String(boolValue);
+  console.log(boolAsString); // "true"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_18() {
   /* 
    
-    Exercise 19
-    
-    Boolean String Conversion: 
-		
-		Convert a true Boolean value to a string and log the result.
+    Exercise 18
+
+    1. Create a variable that holds a 9-digit number with 2 decimal places.
+    2. Then, use Intl.NumberFormat to create a number formatter for the US, Russia, and Japan.
+       For each formatter, provide an object as the second argument with these property/value pairs:
+
+      {style: "currency", currency: "[proper currency string]""}
+
+       Hint: You probably don't know the string arguments to use to do this for Russia.
+             Go to Google.com and search "Intl.NumberFormat argument for Greek format"
+             Then also look up "Intl.NumberFormat option for greek currency"
+             
+             You will forget things all the time in this job, even as an expert.
+             There's a lot of information to keep in your head. 
+
+             That's why learning to put together good search prompts in Google and other
+             search engines is CRUCIAL in this job.
+
+             Don't worry, you'll get better at this over time as you pick up the terminology
+             and understand how programs are written/executed.
+
+    3. Then use each formatter to format the variable from step 1, and log it to the console
+       each time.
+
   */
-  let boolValue = true;
-  let boolAsString = String(boolValue);
-  console.log(boolAsString); // "true"
+
+  // CODE IN THE OPEN LINES BELOW
+
+  let bigNumber = 7500000.99;
+  console.log(
+    new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(bigNumber)
+  ); // US currency format
+  console.log(
+    new Intl.NumberFormat("ru-RU", {
+      style: "currency",
+      currency: "RUB",
+    }).format(bigNumber)
+  ); // Russian currency format
+  console.log(
+    new Intl.NumberFormat("ja-JP", {
+      style: "currency",
+      currency: "JPY",
+    }).format(bigNumber)
+  ); // Japanese currency format
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_19() {
   /* 
    
-    Exercise 20
-    
-    Locale Formatting Comparison: 
-		
-		Compare number formatting between US, Greek, and Japanese locales.
-  */
-
-  let bigNumber = 1234567.89;
-  console.log(new Intl.NumberFormat("en-US").format(bigNumber)); // US format
-  console.log(new Intl.NumberFormat("el-GR").format(bigNumber)); // Greek format
-  console.log(new Intl.NumberFormat("ja-JP").format(bigNumber)); // Japanese format
-}
-
-export function exercise_20() {
-  /* 
-   
-    Exercise 21
+    Exercise 19
     
     Date Arithmetic: 
 		
