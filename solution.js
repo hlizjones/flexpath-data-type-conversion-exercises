@@ -17,7 +17,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_01();
+  exercise_08();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -28,13 +28,13 @@ export function exercise_01() {
     
     Data Types: 
 		
-		1. Create 4 variables, each assigned to one of the following data types:
+		1. Create 4 variables to hold a value for each of these four data types:
 				- String
 				- Number
 				- Boolean
 				- Object
 		2. Then, create a variable and DON'T assign it any value, just declare it. 
-		3. Then, using the `typeof` keyword, log each of their types to the console
+		3. Then, using the `typeof` keyword, log the type of each variable (including the unassigned one) to the console
   
   */
 
@@ -50,7 +50,7 @@ export function exercise_01() {
   console.log(typeof objectType); // "object"
   console.log(typeof undefinedType); // "undefined"
 
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_02() {
@@ -60,19 +60,20 @@ export function exercise_02() {
     
     Type Conversion: 
 		
-		1. Create a variable with a Number value
-		2. Create another variable that holds the result of converting the first variable to a String
-		3. Log this new String variable to the console, along with it's type using `typeof`
+		1. Create a variable and assign it a Number value
+    2. Using the previous variable, convert it to a String and assign it to a new variable
+		3. Then, log this new variable to the console along with its type, using typeof
 
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let num = 123;
   let numAsString = String(num);
   console.log(numAsString); // "123"
   console.log(typeof numAsString); // "string"
 
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_03() {
@@ -82,7 +83,11 @@ export function exercise_03() {
     
     Boolean Conversion: 
 		
-		1. Convert 0 and 1 to Boolean values and log the results.
+		1. Create 2 variables: 
+      * one that stores a Boolean conversion of the number 0 
+      * one that stores a Boolean conversion of the number 1
+    2. Then, log both of these variables to the console to see what 
+        Booleans these numbers are converted to
 
   */
 
@@ -92,7 +97,7 @@ export function exercise_03() {
   console.log(boolFromZero); // false
   console.log(boolFromOne); // true
 
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_04() {
@@ -102,14 +107,15 @@ export function exercise_04() {
     
     Handling NaN: 
 		
-		1. Attempt to convert a non-numeric string to a number and check if it’s NaN, using the method isNan(). 
+		1. Create a variable that attempts to convert a non-numeric string to a number
+    2. Then, using the method isNan(), check if this variable is Not a Number (NaN)
 
   */
 
   // CODE IN THE OPEN LINES BELOW
   let invalidNumber = Number("not a number");
   console.log(isNaN(invalidNumber)); // true
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_05() {
@@ -119,8 +125,10 @@ export function exercise_05() {
     
     Template Literals: 
 		
-		1. Create a string using template literals that embeds a variable representing your age.
-		2. Then log this string to the console
+		1. Create a variable that stores your age as a Number.
+    2. Create a template literal string that embeds this variable in the message:
+        "I am [age] years old."
+		2. Then, log this string to the console
 
   */
 
@@ -128,24 +136,34 @@ export function exercise_05() {
   let age = 30;
   let ageMessage = `I am ${age} years old.`;
   console.log(ageMessage);
-  // Enter your code in the empty lines ABOVE
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_06() {
+  // DONT edit the code below
+  const name = "Alice";
+  const number = 5;
+  // DONT edit the code above
+
   /* 
    
     Exercise 6
     
     Concatenate Strings: 
 		
-		1. Join a string and number using both `+` and template literals. 
-		
-
+		1. Using the `name` and `number` variables above and the `+` operator, 
+       create a new string that says "Alice has 5 apples". Then log this string to the console.
+       
+    2. Then, using the `name` and `number` variables above and a template literal, create a new 
+       string that says "Alice has 5 apples". Then log this string to the console.
   */
-  let name = "Alice";
-  let number = 5;
+
+  // CODE IN THE OPEN LINES BELOW
+
   console.log(name + " has " + number + " apples."); // Using +
   console.log(`${name} has ${number} apples.`); // Using template literals
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_07() {
@@ -155,27 +173,39 @@ export function exercise_07() {
     
     JSON Conversion: 
 		
-		1. Create a JavaScript object, convert it to a JSON string, and log the result.
+		1. Create a JavaScript object, convert it to a JSON string, and log the result to the console.
 
   */
+
+  // CODE IN THE OPEN LINES BELOW
   let person = { name: "Bob", age: 25, isEmployed: true };
   let jsonString = JSON.stringify(person);
   console.log(jsonString);
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_08() {
+  // DONT edit the code below
+  const jsonStringToParse = '{"name": "Charlie", "age": 35}';
+  // DONT edit the code above
+
   /* 
    
     Exercise 8
     
     JSON Parsing: 
 		
-		1. Parse a JSON string into an object and access one of its properties.
+		1. Using the JSON string stored in `jsonStringToParse`, parse this string into an object
+       and then print one of its properties.
 
   */
-  let jsonStringToParse = '{"name": "Charlie", "age": 35}';
+
+  // CODE IN THE OPEN LINES BELOW
   let parsedObject = JSON.parse(jsonStringToParse);
   console.log(parsedObject.name); // "Charlie"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_09() {
