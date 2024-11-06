@@ -17,7 +17,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   */
 
   // Modify the line of code BELOW to run a different exercise
-  exercise_08();
+  exercise_14();
   // Modify the line of code ABOVE to run a different exercise
 }
 
@@ -202,6 +202,7 @@ export function exercise_08() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let parsedObject = JSON.parse(jsonStringToParse);
   console.log(parsedObject.name); // "Charlie"
 
@@ -215,13 +216,20 @@ export function exercise_09() {
     
     Math Object: 
 		
-		1. Use Math.round(), Math.ceil(), and Math.floor() on a decimal number.
+		1. Create a decimal number variable that has at least 5 numbers after the "."
+    2. Then, use Math.round(), Math.ceil(), and Math.floor() on that number, logging 
+       the result to the console each time
 
   */
-  let decimalNumber = 5.7;
+
+  // CODE IN THE OPEN LINES BELOW
+
+  let decimalNumber = 5.72354;
   console.log(Math.round(decimalNumber)); // 6
   console.log(Math.ceil(decimalNumber)); // 6
   console.log(Math.floor(decimalNumber)); // 5
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_10() {
@@ -231,12 +239,19 @@ export function exercise_10() {
     
     Decimal Precision: 
 		
-		1. Use toFixed() to round a decimal number to two decimal places.
+		1. Create a decimal number variable that has at least 5 numbers after the "."
+    2. Then, use toFixed() on the variable and round it to 2 decimal places.
+       Log the result to the console.
 
   */
+
+  // CODE IN THE OPEN LINES BELOW
+
   let preciseNumber = 3.14159;
   let roundedNumber = preciseNumber.toFixed(2);
   console.log(roundedNumber); // "3.14"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_11() {
@@ -246,12 +261,22 @@ export function exercise_11() {
     
     Locale Number Formatting: 
 		
-		1. Format a number using Intl.NumberFormat for the US locale.
+		1. Create a variable to hold a large number with 2 decimal points at the end of it
+    2. Create a new Intl.NumberFormat object for the US locale
+    3. Then, use this new objects `format` function to format the variable from step 1.
+       Store the result in a new variable
+    4. Log the new variable from step 3 to the console.
 
   */
-  let numberToFormat = 1234567.89;
-  let formattedNumberUS = new Intl.NumberFormat("en-US").format(numberToFormat);
+
+  // CODE IN THE OPEN LINES BELOW
+
+  let numberToFormat = 9240012.15;
+  const usFormatter = new Intl.NumberFormat("en-US");
+  let formattedNumberUS = usFormatter.format(numberToFormat);
   console.log(formattedNumberUS); // "1,234,567.89"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_12() {
@@ -261,15 +286,28 @@ export function exercise_12() {
     
     Locale-Based Currency: 
 		
-		1. Format a number as currency in USD using Intl.NumberFormat. 
+		1. Create a variable named `salary` that holds a 5 digit integer
+    2. Create a new Intl.NumberFormat object for the US locale, and provide
+       an object as the second argument with these property/value pairs:
+
+       {style: "currency", currency: "USD"}
+
+    3. Use this formatter to format the variable from step 1.
+       Then log the result to the console
+    
+    Format a number as currency in USD using Intl.NumberFormat. 
 
   */
+
+  // CODE IN THE OPEN LINES BELOW
   let salary = 50000;
-  let formattedCurrencyUSD = new Intl.NumberFormat("en-US", {
+  let usdFormatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-  }).format(salary);
-  console.log(formattedCurrencyUSD); // "$50,000.00"
+  });
+  console.log(usdFormatter.format(salary)); // "$50,000.00"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_13() {
@@ -279,49 +317,55 @@ export function exercise_13() {
     
     Other Locale Currency: 
 		
-		1. Format a number as currency in Japanese Yen using Intl.NumberFormat. 
+		1. Create a variable named `salary` that holds a 6 digit integer
+    2. Create a new Intl.NumberFormat object using "ja-JP" for the first argument, 
+       and provide an object as the second argument with these property/value pairs:
+
+      {style: "currency", currency: "JPY"}
+
+    3. Use this formatter to format the variable from step 1.
+       Then log the result to the console
+    
+    Format a number as currency in Japanese Yen using Intl.NumberFormat. 
 
   */
-  let formattedCurrencyYen = new Intl.NumberFormat("ja-JP", {
+
+  // CODE IN THE OPEN LINES BELOW
+  let salary = 110000;
+  let jpnFormatter = new Intl.NumberFormat("ja-JP", {
     style: "currency",
     currency: "JPY",
-  }).format(salary);
-  console.log(formattedCurrencyYen); // "¥50,000"
+  });
+  console.log(jpnFormatter.format(salary)); // "¥50,000"
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
 export function exercise_14() {
   /* 
    
-    Exercise 14
-    
-    Date Creation: 
-		
-		Create a new Date object. Extract and log the year, month, and day from a Date object.
-	
-  */
-  let currentDate = new Date();
-  console.log(currentDate);
-  console.log(currentDate.getFullYear()); // Year
-  console.log(currentDate.getMonth() + 1); // Month (0-indexed, so add 1)
-  console.log(currentDate.getDate()); // Day
-}
-
-export function exercise_15() {
-  /* 
-   
     Exercise 15
     
     Date String Conversion: 
+
+    1. Create a new Date object and assign it to a variable
+    2. Then, call toDateString on the variable and print the result to the console
+    3. Then, call toTimeString on the variable and print the result to the console
 		
 		Convert a Date object to a human-readable string using toDateString(). 
 		Then, convert it to a time string using toTimeString()
   */
+
+  // CODE IN THE OPEN LINES BELOW
+
   let currentDate = new Date();
   console.log(currentDate.toDateString());
   console.log(currentDate.toTimeString());
+
+  // CODE IN THE OPEN LINES ABOVE
 }
 
-export function exercise_16() {
+export function exercise_15() {
   /* 
    
     Exercise 16
@@ -340,7 +384,7 @@ export function exercise_16() {
   console.log(currentDate.toLocaleDateString("en-GB"));
 }
 
-export function exercise_17() {
+export function exercise_16() {
   /* 
    
     Exercise 17
@@ -354,7 +398,7 @@ export function exercise_17() {
   console.log(currentDate.toLocaleString("en-US", options)); // "10/25/23, 3:23 PM"
 }
 
-export function exercise_18() {
+export function exercise_17() {
   /* 
    
     Exercise 18
@@ -370,7 +414,7 @@ export function exercise_18() {
   }
 }
 
-export function exercise_19() {
+export function exercise_18() {
   /* 
    
     Exercise 19
@@ -384,7 +428,7 @@ export function exercise_19() {
   console.log(boolAsString); // "true"
 }
 
-export function exercise_20() {
+export function exercise_19() {
   /* 
    
     Exercise 20
@@ -400,7 +444,7 @@ export function exercise_20() {
   console.log(new Intl.NumberFormat("ja-JP").format(bigNumber)); // Japanese format
 }
 
-export function exercise_21() {
+export function exercise_20() {
   /* 
    
     Exercise 21
