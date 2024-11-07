@@ -39,6 +39,7 @@ export function exercise_01() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let stringType = "Hello, World!";
   let numberType = 42;
   let booleanType = true;
@@ -92,6 +93,7 @@ export function exercise_03() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let boolFromZero = Boolean(0);
   let boolFromOne = Boolean(1);
   console.log(boolFromZero); // false
@@ -113,8 +115,10 @@ export function exercise_04() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let invalidNumber = Number("not a number");
   console.log(isNaN(invalidNumber)); // true
+
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -133,9 +137,11 @@ export function exercise_05() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let age = 30;
   let ageMessage = `I am ${age} years old.`;
   console.log(ageMessage);
+
   // CODE IN THE OPEN LINES ABOVE
 }
 
@@ -178,6 +184,7 @@ export function exercise_07() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let person = { name: "Bob", age: 25, isEmployed: true };
   let jsonString = JSON.stringify(person);
   console.log(jsonString);
@@ -298,6 +305,7 @@ export function exercise_12() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let salary = 50000;
   let usdFormatter = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -327,6 +335,7 @@ export function exercise_13() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   let salary = 110000;
   let jpnFormatter = new Intl.NumberFormat("ja-JP", {
     style: "currency",
@@ -395,6 +404,7 @@ export function exercise_16() {
   */
 
   // CODE IN THE OPEN LINES BELOW
+
   try {
     let invalidJson = JSON.parse("This is not JSON");
   } catch (error) {
@@ -432,7 +442,7 @@ export function exercise_18() {
     2. Then, use Intl.NumberFormat to create a number formatter for the US, Russia, and Japan.
        For each formatter, provide an object as the second argument with these property/value pairs:
 
-      {style: "currency", currency: "[proper currency string]""}
+      {style: "currency", currency: "[proper currency string]"}
 
        Hint: You probably don't know the string arguments to use to do this for Russia.
              Go to Google.com and search "Intl.NumberFormat argument for Greek format"
