@@ -33,7 +33,7 @@ data types and converting values from one type to another.
    terminal to run the file.
 
 We have included a screen recording showing this process in the file
-`run-exercise-recording.mp4` in this repo.
+`run-exercise-2-recording.mp4` in this repo.
 
 
 &nbsp;
