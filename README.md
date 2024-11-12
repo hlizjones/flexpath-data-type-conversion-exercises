@@ -7,7 +7,7 @@ The intention of this exercise is to give you more experience working with JavaS
 data types and converting values from one type to another.
 
 
-## [Getting Started]
+## Getting Started
 
 
 1. Using Visual Studio Code, open the folder `flexpath-data-type-conversion-exercises` 
