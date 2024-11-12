@@ -36,7 +36,7 @@ We have included a screen recording showing this process in the file
 `run-exercise-2-recording.mp4` in this repo.
 
 
-Exercise solutions are in the `/solutions` folder
+Exercise solutions are in the `/solution` folder
 
 &nbsp;
 ---
