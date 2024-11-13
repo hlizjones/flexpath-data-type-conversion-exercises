@@ -35,6 +35,8 @@ data types and converting values from one type to another.
 We have included a screen recording showing this process in the file
 `run-exercise-2-recording.mp4` in this repo.
 
+VIDEO DISCLAIMER - You will need to clone the repo to your local device before
+you can watch the .mp4 file since GitHub does not support watching it from here.
 
 Exercise solutions are in the `/solution` folder
 
